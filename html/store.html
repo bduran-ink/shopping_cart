@@ -1,0 +1,64 @@
+<!DOCTYPE html>     
+<html>
+    <head>
+        <title>Store Page</title>
+        <meta name="description" content="Store Page"> 
+        <link rel="stylesheet" href="styles.css">
+        <script src="store.js" ></script>
+    </head>
+    <body>
+      <header class="main-header"></header>
+      <nav class ="main-header nav">
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="configure.html">About</a></li>
+            </ul>
+        </nav>
+        <h1 class ="band-name band-name-large">Welcome to the Store Page</h1>
+    </header>
+    
+    <section class="container content-section">
+        <h2 class="section-header">Cart</h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">$0</span>
+
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+    </section>
+    <script src="store.js"></script>
+    <footer class="main-footer">
+        <div class="container main-footer-container">
+            <h3 class="band-name">Shopping Cart</h3>
+            <ul class="nav footer-nav">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="store.html">Store</a>
+                </li>
+                <li>
+                    <a href="configure.html">About</a>
+                </li>
+            </ul>
+            
+        </div>
+        <div id="purchaseModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Thank you for your purchase!</h3>
+      <p>Your order has been placed.</p>
+    </div>
+  </div>
+    </footer>
+    </body>
+</html>
