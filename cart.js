@@ -29,6 +29,12 @@ document.querySelector(".btn-purchase").addEventListener("click", function() {
         cartItemsContainer.appendChild(cartRow);
         cartRow.querySelector(".btn-danger").addEventListener("click", removeCartItem);
         cartRow.querySelector(".cart-quantity-input").addEventListener("change", quantityChanged);
+        function quantityChanged(event) {
+    const input = event.target;
+    const quantity = Math.max(1, parseInt(input.value));
+    input.value = quantity;
+    updateCartTotalDisplay();
+}
     });
     updateCartTotal();
 }   
@@ -38,10 +44,10 @@ function removeCartItem(event) {
     localStorage.setItem("cart", JSON.stringify(cart));
     loadCartItems();
 }
-function updateCartTotal(event) {
+function updateCartTotalDisplay(event) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart = cart.map(item => {
-        if (item.title === title) {
+        const title = event.target.closest(".cart-row").querySelector(".cart-item-title").textContent; {
             const quantity = parseInt(event.target.closest(".cart-row").querySelector(".cart-quantity-input").value);
             return { ...item, quantity:  Math.max(1 , quantity)};
         }
@@ -50,13 +56,13 @@ function updateCartTotal(event) {
     localStorage.setItem("cart", JSON.stringify(cart));
     updateCartTotal();
 }
-function unpdateCartTotal() {
+function updateCartTotalDisplay() {
     const cartItemsContainer = document.querySelector(".cart-items");
     const cartRows = cartItemsContainer.querySelectorAll(".cart-row");
     let total = 0;
-    cart.forEach(item => {
-        const price = parseFloat(item.price.replace("$", ""));
-        const quantity = item.quantity || 1;
+    cartRows.forEach(row => {
+        const price = parseFloat(row.price.replace("$", ""));
+        const quantity = parseInt(row.querySelector(".cart-quantity-input").value);
         total += price * quantity;
     });
     total = Math.round(total * 100) / 100;

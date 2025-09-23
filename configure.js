@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function() {
-    const addToCartButtons = document.querySelectorAll(".add-to-cart");
+    const addToCartButtons = document.querySelectorAll(".shop-item-button");
     for (let button of addToCartButtons) {
         button.addEventListener("click", addTocartClickesd);
          }
@@ -16,9 +16,10 @@ function addTocartClickesd(event) {
         title: title,
         price: price,
         imageSrc: imageSrc
+        
     };
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
+    console.log("cart updated:", cart);
     const existingItem = cart.find(item => item.title === cartItem.title);
     if (existingItem) {
         alert("This item is already added to the cart");
@@ -27,5 +28,5 @@ function addTocartClickesd(event) {
     cart.push(cartItem);
     
     localStorage.setItem("cart", JSON.stringify(cart));
-    alert(`${Item} added to cart`);
+    alert(`${title} added to cart`);
 }  
