@@ -167,4 +167,12 @@ tr:hover {
        box-shadow: 7px 7px 15px rgba(222, 3, 3, 0.1);
        display: inline-block;
      }
-    
+    .shop-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .section-header {
+        text-align: center;
+    }
