@@ -4,3 +4,4 @@ document.addEventListener("DOMContentLoaded", function() {
   banner.className = "welcome-banner";
   document.body.prepend(banner);
   });
+
