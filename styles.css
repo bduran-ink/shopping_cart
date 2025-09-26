@@ -6,16 +6,17 @@
     table, th, td {
         font-size: 14px;
     }
+    
 }
 
 html , body {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
+    background-color: rgb(255, 255, 255);
 }
 header {
-    background-color: #000000;
+    background-color:rgb(11, 5, 65);
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -34,7 +35,7 @@ nav a:hover {
     padding: 20px;
 }
 footer {
-    background-color: #000000;
+    background-color:   #84ae76;
     color: rgb(234, 251, 214);
     text-align: center;
     padding: 10px 0;
@@ -43,8 +44,9 @@ footer {
     bottom: 0;
 }
 button {
-    background-color: #f46219;
+    background-color: #051c5b;
     color: white;
+    box-shadow: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -54,7 +56,9 @@ button:hover {
     background-color: #161616;
 }
 h1, h2 {
-    color: #ff0000;
+    
+    color:  #84ae76;
+    text-align: center;
 }
 input[type="text"], input[type="number"] {
     padding: 8px;
@@ -86,14 +90,14 @@ tr:hover {
 .modal {
     display: none; 
     position: fixed; 
-    z-index: 1; 
+    z-index: 1000; 
     left: 0;
     top: 0;
     width: 100%; 
     height: 100%; 
     overflow: auto; 
     background-color: rgb(219, 121, 121); 
-    background-color: rgb(251, 74, 74); 
+    
 }
 .modal-content {
     background-color: #ddd;
@@ -102,14 +106,12 @@ tr:hover {
     border-radius: 8px;
     width: 80%;
     max-width: 400px;
-    animation: fadeIn 0.4s ease-in-out;
+    text-align: center;
+    box-shadow: #051c5b;
     
 
 }
-@keyframes fadeIn {
-    from {opacity: 0; transform: scale(0.95);}
-    to {opacity: 1; transform: scale(1);}
-}
+
 .close {
     color: #aaa;
     float: right;
@@ -123,7 +125,7 @@ tr:hover {
 }
  .cart-item-title {
     font-weight: bold;  
-    color: azure;
+    color: rgb(178, 45, 45);
  }
     .cart-item-image {
         display: block;
@@ -139,12 +141,12 @@ tr:hover {
     }
     
     .welcome-banner {
-        background-color: #f46219;
+        background-color:  #84ae76;
        
-       padding: 10px;
+       padding: 25px;
        
        text-align: center;
-       font-size: large;
+       font-size: x-large;
         font-weight: bold;
         
          font-family: Jazz LET, fantasy
@@ -158,13 +160,13 @@ tr:hover {
      }
 
      .shop-item-price {
-        color: #f35100;
+        color: #000000;
         font-size: 18px;
      }
      .shop-item-image {
         
         border-radius: 7px;
-       box-shadow: 7px 7px 15px rgba(222, 3, 3, 0.1);
+       box-shadow: 7px 7px 15px rgb(11, 5, 65);
        display: inline-block;
      }
     .shop-items {
@@ -172,7 +174,25 @@ tr:hover {
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .shop-item{
+        width: 30%;
+        border: 2px solid black;
+        border-radius: 8px;
+        padding: 15px;
+        background-color: #84ae76;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        text-align: center;
     }
     .section-header {
         text-align: center;
     }
+
+    .containercontent-section{
+        text-align: center;
+
+    }
+    

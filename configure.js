@@ -11,8 +11,7 @@ function addTocartClickesd(event) {
     const title = shopItem.querySelector(".shop-item-title").textContent;
     const price = shopItem.querySelector(".shop-item-price").textContent;
     const imageSrc = shopItem.querySelector(".shop-item-image").src;
-    
-    const cartItem = {
+     const cartItem = {
         title: title,
         price: price,
         imageSrc: imageSrc
@@ -29,4 +28,5 @@ function addTocartClickesd(event) {
     
     localStorage.setItem("cart", JSON.stringify(cart));
     alert(`${title} added to cart`);
-}  
+}
+
