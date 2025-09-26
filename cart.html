@@ -17,19 +17,20 @@
                 
             </ul>
         </nav>
-        <h1 class ="band-name band-name-large">
-            Shopping Cart </h1>
+        <h1 class ="band-name">Shopping Cart </h1>
     </header>
     
+    <main>
     <section class="container content-section">
         <h2 class="section-header">Cart</h2>
-        <div class="cart-row">
+        <div class="cart-items">
             <span class="cart-item cart-header cart-column">ITEM</span>
             <span class="cart-price cart-header cart-column">PRICE</span>
             <span class="cart-quantity cart-header cart-column">QUANTITY</span>
         </div>
         <div class="cart-items">
         </div>
+
         <div class="cart-total">
             <strong class="cart-total-title">Total</strong>
             <span class="cart-total-price">$0</span>
@@ -37,32 +38,27 @@
         </div>
         <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
     </section>
-  
-    <footer class="main-footer">
-        <div class="container main-footer-container">
-            <h3 class="band-name"></h3>
-            <ul class="nav footer-nav">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="configure.html">Shop</a>
-                <li>
-                   <a href="cart.html">Cart</a>
-                </li>
-            </ul>
-            
-        </div>
-        <div id="cartModal" class="modal">
+  </main>
+
+    <div id="cartModal" class="modal" role="dialog" aria-modal="true">
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span class="close" aria-label="Close modal">&times;</span>
       <h3>Thank you for your purchase!</h3>
       <p>Your order has been placed.</p>
-      <a href="cart.html" class="btn btn-primary">Go To Cart</a>
+      <button onclick="location.href='cart.html'" class="btn btn-primary">Go To Cart</button>
     </div>
   </div>
-    </footer>
-     <script src="store.js" ></script>
-    </body>
-     
+
+  <footer class="main-footer">
+    <div class="container main-footer-container">
+      <ul class="nav footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="configure.html">Shop</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="store.js"></script>
+</body>
 </html>

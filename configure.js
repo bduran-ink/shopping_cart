@@ -18,7 +18,7 @@ function addTocartClickesd(event) {
         
     };
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    console.log("cart updated:", cart);
+    
     const existingItem = cart.find(item => item.title === cartItem.title);
     if (existingItem) {
         alert("This item is already added to the cart");
@@ -27,6 +27,7 @@ function addTocartClickesd(event) {
     cart.push(cartItem);
     
     localStorage.setItem("cart", JSON.stringify(cart));
+    console.log("cart updated:", cart);
     alert(`${title} added to cart`);
 }
 
